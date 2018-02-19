@@ -7,20 +7,21 @@
 </head>
 <body>
 	<div id="header">
-		<img id="iut" src="img/logo.jpg">
-
-		<ul>
-			<li><a href="#">Accueil</a></li>
-			<li><a href="#">Titre 1</a></li>
-			<li><a href="#">Contact</a></li>
-			<input type="search" name="search" placeholder="Rechercher" id="search">
-		</ul>
+		<div>
+			<img id="logo" src="img/logo.jpg">
+			<table>
+				<td><a href="#">Accueil</a></td>
+				<td><a href="#">Game of Thrones</a></td>
+				<td><a href="#">Contact</a></td>
+				<td><input type="search" name="search" placeholder="  Rechercher..." id="search"></td>
+			</table>
+		</div>
 	</div>
 
 
 	<div class="in">
 		<div id="haut">
-			<img id="paysage1" src="img/got.jpg">
+			<img id="banniere" src="img/got.jpg">
 		</div>
 		<div id="content">
 			<h1>Ces personnages de Game of Thrones qui pourraient vaincre le Night King !</h1>
@@ -28,45 +29,54 @@
 			<p>Le temps parait bien long sans Game of Thrones. La série phare d'HBO ne sera pas de retour sur nos écrans avant 2019 ! La date officielle n'a pas encore été communiquée mais d'après les dires de Maisie Williams, alias Arya Stark, les six ultimes épisodes de la saga seront diffusés au mois d'avril. Alors au lieu de se lamenter pendant les 14 prochains mois, essayons d'utiliser notre temps à parier sur l'avenir de nos personnages préférés. Les théories fusent déjà sur la Toile : qui prendra le Trône de Fer à la fin de la saison 8 de Game of Thrones ? Qui pourrait vaincre (ou ne pas vaincre) le Night King ?</p>
 			<div class="image">
 				<img src="img/sandor.jpg">
-				<h2>Sandor Clegane </h2>
-				<p>test</p>
-			</div>
-			<div class="image">
-				<img src="img/jaime.jpg">
-				<h2>Jaime Lanniste</h2>
-				<p>test</p>
-			</div>
-			<div class="image">
-				<img src="img/arya.png">
-				<h2>Arya Stark</h2>
-				<p>test</p>
+				<fieldset>
+					<legend><h2>Sandor Clegane </h2></legend>
+					<p>Clegane est l'un des guerriers les plus redoutables de la série. Grâce à ses visions à travers les flammes, le frère de Gregor a prédit une grande bataille dans les montagnes face aux Marcheurs Blancs. Denué de toute crainte, il a vaillamment combattu aux côtés de Jon Snow. Son pouvoir de prédiction indique peut être son lien avec le Seigneur de la lumière...</p>
+				</fieldset>
 			</div>
 			<div class="image">
 				<img src="img/jon.jpg">
-				<h2>Jon Snow</h2>
-				<p>test</p>
+				<fieldset>
+					<legend><h2>Jon Snow</h2></legend>
+					<p>Fils légitime de Rhaegar Targaryen et Lyanna Stark, Jon Snow est le la définition même de "a Song of ice and fire". Au lieu de faire des bébés avec sa tante, il devrait se concentrer sur la bataille finale pour accéder au Trône de Fer. Guerrier aguerri, il a déjà été confronté aux Marcheurs Blancs et au Night King. Sans oublier qu'il a une épée d'acier valyrienne...</p>
+				</fieldset>
 			</div>
+			<div class="image">
+				<img src="img/jaime.jpg">
+				<fieldset>
+					<legend><h2>Jaime Lannister</h2></legend>
+					<p>Malgré sa main en moins, Jaime Lannister est un très bon guerrier. Maintenant qu'il a ENFIN lâché sa soeur, le régicide est libre de ses actions. Va-t-il rejoindre son petit frère et la Reine des Dragons ? Si oui, Jaime pourra prouver sa détermination et son courage face au Night King. Un second roi sur sa liste de victimes pourrait être une très bonne fin !</p>
+				</fieldset>
+			</div>
+			<div class="image">
+				<img src="img/arya.png">
+				<fieldset><legend><h2>Arya Stark</h2></legend>
+				<p>Arya n'a peur de rien et elle l'a prouvé à de multiples reprises. Elle tue aussi vite que son ombre et son pouvoir de prendre les visages est un bien très précieux pour la suite des événements. Si elle se trouve sur le champs de bataille, Arya pourra facilement atteindre le Night King et le tuer avec sa dague en acier de Valyrian !</p></fieldset>
+			</div>
+			
 
 		</div>
 
 		<div id="map">
-			<h2>titre</h2>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5027.078431764145!2d1.8835069999999998!3d50.9507341!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1519051669296" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<fieldset>
+				<legend><h2>Nous savons où vous travaillez...</h2></legend>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5027.078431764145!2d1.8835069999999998!3d50.9507341!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1519051669296" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</fieldset>
 		</div>
 
 		
 		<div id="form">
-			<h2>titre</h2>
+			
 			<form>
 				<fieldset>
-					<legend>Compléter ce formulaire</legend>
-					<input class="other1" type="text" name="prenom" placeholder="Prénom"/>
-					<input class="other2" type="text" name="nom" placeholder="Nom"/>
-					<input class="other1"type="text" name="date" placeholder="Date de naissance"/>
-					<input class="other2" type="text" name="ville" placeholder="Ville de naissance"/>
-					<input class="only" type="email" name="mail" placeholder="Adresse email"/>
-					<input class="only" type="photo" name="photo" placeholder="Photo"/>
-					<textarea class="only" placeholder="Message"></textarea>
+					<legend><h2>Et vous,vous pensez à qui?</h2></legend>
+					<input class="other1 effect-8" type="text" name="prenom" placeholder="Prénom"/>
+					<input class="other2 effect-8" type="text" name="nom" placeholder="Nom"/>
+					<input class="other1 effect-8"type="text" name="date" placeholder="Date de naissance"/>
+					<input class="other2 effect-8" type="text" name="ville" placeholder="Ville de naissance"/>
+					<input class="only effect-8" type="email" name="mail" placeholder="Adresse email"/>
+					<input class="only effect-8" type="photo" name="photo" placeholder="Photo"/>
+					<textarea class="only effect-8" placeholder="Message"></textarea>
 					<input class="only" type="submit" name="envoyer" placeholder="Prénom"/>
 				</fieldset>
 			</form>
