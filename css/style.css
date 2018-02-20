@@ -62,6 +62,8 @@ html{
 	width: auto;
 	border:none;
 	border-radius: 15px;
+	text-transform: uppercase;
+	height: 2em;
 }
 
 #header li:nth-child(-n+2)::after{
