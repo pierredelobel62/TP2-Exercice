@@ -37,6 +37,7 @@ html{
 	float: right;
 	font-weight: bold;
 	margin-top: 4%;
+	margin-bottom: 4%;
 }
 #header li{ 
 	display: inline;
@@ -48,6 +49,7 @@ html{
 #header #logo{
 	min-width: 5%;
 	width: 10%;
+	position: absolute;
 }
 
 #header #search{
@@ -57,7 +59,7 @@ html{
 	background:#478bf9;
 	color:#fff;
 	border-radius:2px;
-	width:100px;
+	width: auto;
 	border:none;
 	border-radius: 15px;
 }
@@ -182,6 +184,7 @@ textarea{
 		margin-right: auto;
 		display: block;
 		text-align: center;
+		position: relative;
 	}
 
 	#header ul{
@@ -254,7 +257,7 @@ textarea{
     text-align: left;
 	}
 	 
-	#primary_nav li a {
+	#primary_nav li a ,#primary_nav li input{
 	    display: block;
 	    padding: 0 20px;
 	    color: #fff;
@@ -266,6 +269,11 @@ textarea{
 	    line-height: 2em;
 	    height: 2em;
 	}
+
+	#primary_nav li input{
+		width: 200px;
+	}
+
 	 
 	#primary_nav li:last-child a {
 	    border-bottom: none;
