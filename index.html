@@ -83,14 +83,30 @@
 			<form>
 				<fieldset>
 					<legend><h2>Et vous,vous pensez à qui?</h2></legend>
-					<input class="other1 effect-8" type="text" name="prenom" placeholder="Prénom"/>
-					<input class="other2 effect-8" type="text" name="nom" placeholder="Nom"/>
-					<input class="other1 effect-8"type="text" name="date" placeholder="Date de naissance"/>
-					<input class="other2 effect-8" type="text" name="ville" placeholder="Ville de naissance"/>
+					<input class="other1 effect-8" type="text" name="prenom" placeholder="Prénom" id="prenom" />
+					<input class="other2 effect-8" type="text" name="nom" placeholder="Nom" id="nom" />
+					<input class="other1 effect-8"type="text" name="date" placeholder="Date de naissance" id="date" />
+					<input class="other2 effect-8" type="text" name="ville" placeholder="Ville de naissance" id="ville" />
 					<input class="only effect-8" type="email" name="mail" placeholder="Adresse email"/>
-					<input class="only effect-8" type="file" name="photo" placeholder="Photo" accept="image/*" capture/>
-					<textarea class="only effect-8" placeholder="Description"></textarea>
-					<input class="only" type="submit" name="envoyer" placeholder="Prénom"/>
+					<input class="only effect-8" type="file" name="photo" placeholder="Photo" accept="image/*" id="photo" capture/>
+					<textarea id="area" class="only effect-8" placeholder="Description"></textarea>
+					<input id="stockage" class="only" type="button" name="envoyer" value="Envoyer" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="form">
+			
+			<form>
+				<fieldset>
+					<legend><h2>Récupération</h2></legend>
+					<input class="other1 effect-8" type="text" name="prenom" placeholder="Prénom" id="prenom2" />
+					<input class="other2 effect-8" type="text" name="nom" placeholder="Nom" id="nom2" />
+					<input class="other1 effect-8"type="text" name="date" placeholder="Date de naissance" id="date2" />
+					<input class="other2 effect-8" type="text" name="ville" placeholder="Ville de naissance" id="ville2" />
+					<input class="only effect-8" type="email" name="mail" placeholder="Adresse email" id="mail2" />
+					<textarea id="area2" class="only effect-8" placeholder="Description"></textarea>
+					<input id="lecture" class="only" type="button" name="lecture" value="Récupérer" />
+					<input id="reset" class="only" type="reset"  name="reset" value="Effacer" />
 				</fieldset>
 			</form>
 		</div>
@@ -157,6 +173,44 @@
 			image.style.transform = "rotateX("+alpha+"deg)";
 			image.style.transform = "rotateY("+beta+"deg)";
 		}
+
+
+		// Méthode de stockage
+		document.getElementById('stockage').onclick = function() {
+			if(typeof localStorage!='undefined' && JSON) {
+				var coordonnees = {
+					prenom:document.getElementById('prenom').value,
+					nom:document.getElementById('nom').value,
+					date:document.getElementById('date').value,
+					ville:document.getElementById('ville').value,
+					/* Ne veut pas récupérer la valeur du champ mail
+					mail:document.getElementById('mail').value,*/
+					area:document.getElementById('area').value,
+				};
+				localStorage.setItem('coord',JSON.stringify(coordonnees));
+				alert("Mémorisation effectuée");
+			} else alert("localStorage n'est pas supporté");
+		};
+		// Méthode de lecture
+		document.getElementById('lecture').onclick = function() {
+			if(typeof localStorage!='undefined' && JSON) {
+				var coordonnees = JSON.parse(localStorage.getItem('coord'));
+				document.getElementById('prenom2').value = coordonnees.prenom;
+				document.getElementById('nom2').value = coordonnees.nom;
+				document.getElementById('date2').value = coordonnees.date;
+				document.getElementById('ville2').value = coordonnees.ville;
+				/*document.getElementById('mail2').value = coordonnees.mail;*/
+				document.getElementById('area2').value = coordonnees.area;
+				alert("Lecture effectuée");
+			} else alert("localStorage n'est pas supporté");
+		};
+
+		document.getElementById('reset').onclick = function() {
+			if (typeof localStorage!='undefined' && JSON) {
+				localStorage.clear();
+			}
+		}
+
 	</script>
 
 </body>
