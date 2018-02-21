@@ -185,6 +185,16 @@ textarea{
 #footer{
 	text-align: right;
 }
+#iut{
+	width: 49%;
+}
+#classIut{
+	text-align: center;
+	width: 99%;
+}
+#iut{
+	margin-top: 3%;
+}
 
 
 
@@ -236,7 +246,7 @@ textarea{
 
 	#form, #map{
 		width: 100%;
-		margin: 0;
+		margin-left: 0;
 	}
 
 	#header #tel{
@@ -313,6 +323,9 @@ textarea{
 	}
 	nav{
 		display: none;
+	}
+	#iut{
+		width: 100%;
 	}
 }
 
