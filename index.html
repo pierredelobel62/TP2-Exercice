@@ -156,8 +156,9 @@
 			var gamma = event.gamma;
 			var image = document.getElementById("iut");
 			alert(alpha);
-			image.style.transform = "translate3d("+alpha+","+beta+","+gamma+")";
-
+			image.style.transform = "rotateX("+alpha+")";
+			image.style.transform = "rotateY("+beta+")";
+			image.style.transform = "rotateZ("+gamma+")";
 		}
 	</script>
 
