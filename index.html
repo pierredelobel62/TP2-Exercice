@@ -151,13 +151,12 @@
 		}
 
 		function process(event){
-			var alpha = event.accelerationIncludingGravity.x;
-			var beta = event.accelerationIncludingGravity.y;
-			var gamma = event.accelerationIncludingGravity.z;
+			var alpha = event.alpha;
+			var beta = event.beta;
+			var gamma = event.gamma;
 			var image = document.getElementById("iut");
-			document.getElementById("test").innerHTML=alpha;
 			alert(alpha);
-			image.style.transform = "scale3d("+alpha+","+beta+","+gamma+")";
+			image.style.transform = "translate3d("+alpha+","+beta+","+gamma+")";
 
 		}
 	</script>
